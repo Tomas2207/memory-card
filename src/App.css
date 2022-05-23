@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 420px);
+  row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #5a53e1;
+  height: 100%;
+
+  position: relative;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  border: 3px solid black;
+  border-radius: 25px;
+  background-size: 100%;
+  color: white;
+  font-size: 1.7em;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 3px 10px black;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 15px black;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin: 0 0 10px;
+}
+
+.header {
+  padding: 50px;
+  font-size: 1.8em;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  font-weight: bold;
+  border-bottom: 5px solid black;
+  box-shadow: 5px 10px 15px black;
+  z-index: 1;
+
+  background-color: #605c9d;
+}
+
+.head-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#controller {
+  width: 100px;
+}
+
+.score {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.nameTag {
+  background-color: black;
+}
+.win {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.37);
+  z-index: 3;
+}
+
+.winner {
+  display: absolute;
+  background-color: #605c9d;
+  width: 25%;
+  padding: 100px 100px;
+  border-radius: 5px;
+  margin: 20px auto;
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+
+  box-shadow: 3px 5px 10px black;
+}
+
+@media only screen and (max-width: 665px) {
+  .score {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
